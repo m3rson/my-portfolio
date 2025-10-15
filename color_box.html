@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box</title>
+    <link rel="stylesheet" href="color.css">
+</head>
+<body>
+    <div class="container">
+        <p>click the button to change the color</p>
+        <div id="colorBox"></div>
+        <button onclick="changeColor()">click</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            const box = document.getElementById("colorBox");
+            const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            box.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
